@@ -1,0 +1,109 @@
+:root {
+  --accent: #c1a688;
+  --main-color: #61664f;
+  --secondary-color: #997454;
+  --background: #2b3124;
+  --font-style: "Monaco";
+}
+
+body {
+  background: var(--background);
+}
+
+.game-box {
+  width: 20px;
+  height: 20px;
+  margin: 1px;
+  background-color: var(--main-color);
+  border-radius: 2px;
+}
+
+.game-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.game-container {
+  align-self: center;
+  margin: 50px;
+}
+
+.snake-body {
+  background: var(--snake);
+}
+
+.game-food {
+  background: green;
+}
+
+.game-score {
+  color: grey;
+  text-align: center;
+}
+
+.test {
+  background: yellow;
+}
+.player-container {
+  width: 20%;
+  display: flex; 
+  flex-direction: column;
+  height: auto
+}
+
+.player-stats {
+  border-color: var(--accent);
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 2px;
+  padding: 10px;
+}
+.scores-container {
+  color: white;
+  width: 20%;
+}
+
+.scores-header {
+  font-size: larger;
+  text-align: center;
+  margin: 10px;
+  color: var(--accent);
+  font-family: var(--font-style);
+}
+
+.player-scores {
+  border-color: var(--accent);
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 2px;
+  padding: 10px;
+}
+
+.player-score {
+  display: flex;
+  margin: 5px;
+  padding: 5px;
+  font-family: var(--font-style);
+  color: var(--accent);
+  font-size: medium;
+}
+
+.username {
+  font-size: larger;
+  text-align: center;
+  margin: 10px;
+  color: var(--accent);
+  font-family: var(--font-style);
+}
+
+.player-name-input {
+  border-color: var(--accent);
+  border-style: solid;
+  border-radius: 2px;
+  background-color: #61664f;
+}
+
+.player-score-box {
+  margin-right: 5px;
+  margin-left: 5px;
+}
