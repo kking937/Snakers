@@ -5,7 +5,7 @@ import { io, Socket } from "socket.io-client";
 import { ServerToClientEvents, ClientToServerEvents, ServerEvents, ClientEvents } from "../shared/SocketTypes";
 import "./GameContainer.css";
 import { AddedItem, Direction, PlayerInfo, PowerUpType, Score } from "../shared/types";
-const socket: Socket<ServerToClientEvents, ClientToServerEvents> = io("ws://localhost:4000");
+const socket: Socket<ServerToClientEvents, ClientToServerEvents> = io();
 
 enum ActionType {
   TICK,
