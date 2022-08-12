@@ -4,13 +4,12 @@ import { detectItemCollision, generateNewItem, getInvertStatus, getItems, remove
 import { getNextHeadPosition, getKey, randomSquare } from "./snakeHelper";
 import { ClientToServerEvents, ServerEvents, InterServerEvents, ServerToClientEvents, SocketData, ClientEvents } from "../src/shared/SocketTypes";
 import { AddedItem, Coordinate, Direction, Item, ItemType, Player, PowerUpType, SnakeCoordinates, UpdateMessage } from "../src/shared/types";
-import { generateRandomeColor, getJawsColor, revertJawsColor } from "./helper";
+import { generateRandomeColor, getJawsColor } from "./helper";
+import { createServer } from "http";
+import { app } from ".";
 
-const io = new Server<ClientToServerEvents, ServerToClientEvents, InterServerEvents, SocketData>({
-  cors: {
-    origin: "*"
-  }
-});
+export const server = createServer(app);
+const io = new Server<ClientToServerEvents, ServerToClientEvents, InterServerEvents, SocketData>(server);
 
 let openId = 0;
 
@@ -358,6 +357,6 @@ io.on("connection", (socket) => {
 });
 
 try {
-  io.listen(4000);
+  server.listen(4000);
   console.log(`Listening on port 4000`)
 } catch { }

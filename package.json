@@ -19,7 +19,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && cp build server/dist/build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -29,6 +29,7 @@
       "react-app/jest"
     ]
   },
+  "homepage": "./",
   "browserslist": {
     "production": [
       ">0.2%",

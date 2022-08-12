@@ -7,11 +7,7 @@ const snakeHelper_1 = require("./snakeHelper");
 const SocketTypes_1 = require("../src/shared/SocketTypes");
 const types_1 = require("../src/shared/types");
 const helper_1 = require("./helper");
-const io = new socket_io_1.Server({
-    cors: {
-        origin: "*"
-    }
-});
+const io = new socket_io_1.Server();
 let openId = 0;
 const players = [];
 const snakeCoordinates = {};
